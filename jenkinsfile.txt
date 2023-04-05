@@ -2,19 +2,19 @@ pipeline {
     agent any
 
     stages {
-        stage('EXPERIMRNT_4_DEVOPS') {
+        stage('checking python version') {
             steps {
-                echo 'Hello World'
+                bat 'python -V'
             }
         }
-        stage('Level 2- The declarative project') {
+        stage('REPO Cloning') {
             steps {
-                echo 'Level 2- The declarative project'
+                bat 'xcopy /S "*" "C:/xampp1/htdocs/Devops_Jenkins" /Y'
             }
         }
-        stage('THE LEVEL 3') {
+        stage('print done') {
             steps {
-                echo 'THIS IS LEVEL 3'
+                echo 'Done!'
             }
         }
         
